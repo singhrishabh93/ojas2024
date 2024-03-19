@@ -97,21 +97,9 @@
         document.getElementById('viewersCount').textContent = 'Viewers: ' + localStorage.getItem('viewersCount');
     }
 
-    // Function to check if the user has visited the page before
-    function checkUniqueUser() {
-        if (document.cookie.includes('visited=true')) {
-            return false;
-        } else {
-            document.cookie = 'visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT'; // Set a cookie that expires in the distant future
-            return true;
-        }
-    }
-
-    // Call the functions when the page loads
+    // Call the function when the page loads
     window.onload = function() {
-        if (checkUniqueUser()) {
-            incrementViewersCount();
-        }
+        incrementViewersCount();
     };
 </script>
 

@@ -81,27 +81,7 @@
         <li><a class="link" href="https://drive.google.com/drive/folders/1RjmBOnyj4mXt6l6l3qX48kK0ozbYnVw2?usp=sharing" target="_blank">Link 5</a></li>
     </ul>
     <p class="moving-text">More links of photos will be updated here. Keep visiting the website for the same. Thank You!</p>
-    <p id="viewersCount">Viewers: 0</p>
 </div>
-
-<script>
-    // Function to increment viewers count
-    function incrementViewersCount() {
-        if (localStorage.getItem('viewersCount') === null) {
-            localStorage.setItem('viewersCount', 1);
-        } else {
-            let count = parseInt(localStorage.getItem('viewersCount'));
-            count++;
-            localStorage.setItem('viewersCount', count);
-        }
-        document.getElementById('viewersCount').textContent = 'Viewers: ' + localStorage.getItem('viewersCount');
-    }
-
-    // Call the function when the page loads
-    window.onload = function() {
-        incrementViewersCount();
-    };
-</script>
 
 </body>
 </html>
